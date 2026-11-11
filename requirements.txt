@@ -1,0 +1,22 @@
+# 直接依赖清单：在项目 Conda 环境执行 python -m pip install -r requirements.txt。
+# FastAPI/uvicorn 提供服务；openai 官方 SDK 调用模型；httpx 提供传输和离线测试。
+# dotenv 读取配置；numpy/FAISS 处理向量。
+# pypdf 解析文字，RapidOCR/PDFium 提供本地 OCR，SQLAlchemy 管理 SQLite 元数据。
+# 当前包含 RAG、API 与本地网页运行依赖；已验证版本另见 requirements.lock.txt。
+# Gradio 提供同源聊天页面；FastAPI 路由同时开放 JSON API。
+gradio==6.30.0
+Pillow>=10
+fastapi
+uvicorn
+httpx
+openai>=2.54,<3
+python-dotenv
+numpy
+faiss-cpu
+pypdf
+rapidocr-onnxruntime==1.4.4
+pypdfium2==5.14.0
+SQLAlchemy>=2.0,<3
+# 中英文关键词分词与 BM25+ 召回；不改变 FAISS/JSON 和 SQLite 存储。
+jieba==0.42.1
+rank-bm25==0.2.2

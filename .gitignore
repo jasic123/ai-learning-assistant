@@ -1,0 +1,29 @@
+# Git 忽略规则：排除本地配置、缓存、虚拟环境、私有资料及运行生成文件。
+# 感叹号规则把无密钥模板和空目录占位文件重新纳入版本管理。
+.idea/
+.chart-data-*/
+.codex-pptx-work/
+agent_docx_work/
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+.env
+.env.*
+!.env.example
+data/**
+!data/uploads/
+!data/uploads/.gitkeep
+!data/indexes/
+!data/indexes/.gitkeep
+artifacts/**
+!artifacts/.gitkeep
+outputs/
+evaluations/
+*.log
+frontend-react/node_modules/
+frontend-react/dist/
+D/nodejs/
+**/D/nodejs/
+*.pptx
+*.docx
